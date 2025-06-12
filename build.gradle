@@ -9,6 +9,7 @@ repositories {
     mavenCentral()
 }
 
+<<<<<<< Updated upstream
 test {
     useJUnitPlatform()
 }
@@ -17,3 +18,13 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
 }
+=======
+dependencies {
+    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter
+    testImplementation("org.junit.jupiter:junit-jupiter:5.13.1")
+}
+
+test {
+    useJUnitPlatform()
+}
+>>>>>>> Stashed changes
