@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.params.provider.ValueSource;
+import org.junit.jupiter.params.ParameterizedTest;
 
 public class CalculatorTest {
 
@@ -42,9 +43,10 @@ public class CalculatorTest {
         assertEquals(expected, actual);
     }
 
-    @Test
-    public void testIsEven() {
-        boolean actual = calculator.isEven(2);
+    @ParameterizedTest
+    @ValueSource(ints = {2, -2, -100000, 200000 })
+    public void testIsEven(int number) {
+        boolean actual = calculator.isEven(number);
 
         assertTrue(actual);
     }
